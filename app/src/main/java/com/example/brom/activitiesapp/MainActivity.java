@@ -1,5 +1,6 @@
 package com.example.brom.activitiesapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), mountainNames[position] + "\n" + mountainLocations[position] + "\n" + mountainHeights[position], Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(getApplicationContext(), mountainNames[position] + "\n" + mountainLocations[position] + "\n" + mountainHeights[position], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
+                String mountain_name = mountainNames[position];
+                intent.putExtra("MOUNTAIN_NAME", mountain_name);
+                startActivity(intent);
             }
         });
 
