@@ -30,6 +30,8 @@ public class MountainDetailsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String mountain_name = intent.getStringExtra("MOUNTAIN_NAME");
+        String mountain_location = intent.getStringExtra("MOUNTAIN_LOCATION");
+        String mountain_height = intent.getStringExtra("MOUNTAIN_HEIGHT");
         Toast.makeText(getApplicationContext(),mountain_name, Toast.LENGTH_SHORT).show();
     }
 
