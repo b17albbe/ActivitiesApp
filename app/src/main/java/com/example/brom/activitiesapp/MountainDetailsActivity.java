@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.TextView;
 
 public class MountainDetailsActivity extends AppCompatActivity {
 
@@ -24,7 +25,13 @@ public class MountainDetailsActivity extends AppCompatActivity {
         String mountain_name = intent.getStringExtra("MOUNTAIN_NAME");
         String mountain_location = intent.getStringExtra("MOUNTAIN_LOCATION");
         String mountain_height = intent.getStringExtra("MOUNTAIN_HEIGHT");
-        Toast.makeText(getApplicationContext(),mountain_name, Toast.LENGTH_SHORT).show();
+
+        //TextView myText = (TextView) findViewById(R.id.textID);
+        //myText.setText(mountain_name);
+
+        TextView textID = (TextView)findViewById(R.id.textID);
+        textID.setText(mountain_name + " " + mountain_height + " " + mountain_location);
+
     }
 
 }

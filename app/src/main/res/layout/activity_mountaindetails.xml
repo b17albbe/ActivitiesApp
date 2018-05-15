@@ -26,7 +26,8 @@
             android:layout_height="539dp"
             android:layout_margin="16dp"
             android:textSize="20sp"
-            android:text="Hello Card" />
+            android:id="@+id/textID"
+            android:text="@string/app_name" />
 
     </android.support.v7.widget.CardView>
 
