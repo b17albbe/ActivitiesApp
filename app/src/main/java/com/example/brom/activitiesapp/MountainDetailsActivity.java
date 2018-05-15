@@ -24,7 +24,8 @@ public class MountainDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String mountain_name = intent.getStringExtra("MOUNTAIN_NAME");
         String mountain_location = intent.getStringExtra("MOUNTAIN_LOCATION");
-        String mountain_height = intent.getStringExtra("MOUNTAIN_HEIGHT");
+        //String mountain_height = intent.getStringExtra("MOUNTAIN_HEIGHT");
+        int mountain_height = intent.getIntExtra("MOUNTAIN_HEIGHT", 0);
 
         //TextView myText = (TextView) findViewById(R.id.textID);
         //myText.setText(mountain_name);
